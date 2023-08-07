@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :groups
   has_many :entities
   # validations      
-  validate :name, :email, presence: true
-  validate :email, untiquness: true
+  validates :name, :email, presence: true
+  validates :email, uniqueness: true
 end
