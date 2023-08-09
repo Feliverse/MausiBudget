@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show edit update destroy]
-  before_action :authenticate_user!
+  load_and_authorize_resource
+  before_action :set_group, only: %i[show]
 
   # GET /groups or /groups.json
   def index
@@ -9,16 +9,13 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
-    @entities = @group.deals.order('created_at DESC')
+    @entities = @group.entities.order(created_at: 'desc')
   end
 
   # GET /groups/new
   def new
     @group = Group.new
   end
-
-  # GET /groups/1/edit
-  def edit; end
 
   # POST /groups or /groups.json
   def create
@@ -29,17 +26,6 @@ class GroupsController < ApplicationController
         format.html { redirect_to group_url(@group), notice: 'Group was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /groups/1 or /groups/1.json
-  def update
-    respond_to do |format|
-      if @group.update(group_params)
-        format.html { redirect_to group_url(@group), notice: 'Group was successfully updated.' }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
       end
     end
   end
