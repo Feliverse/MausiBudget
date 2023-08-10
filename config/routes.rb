@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :groups 
-  resources :entities
+  resources :groups do
+    resources :entities
+  end
 end

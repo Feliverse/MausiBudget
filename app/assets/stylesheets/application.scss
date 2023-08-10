@@ -1,2 +1,29 @@
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+
+
+@font-face {
+  font-family: 'Proxima-Nova-Bold';
+  src: font-url('Proxima-Nova-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Proxima-Nova-Light';
+  src: font-url('Proxima-Nova-Light.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Proxima-Nova-Light';
+  background-color: #f5f5f5;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Proxima-Nova-Bold';
+}
+
+.btn-primary {
+  --bs-btn-bg: #3778c2;
+  --bs-btn-color: #fff;
+}

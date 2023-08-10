@@ -5,19 +5,26 @@ class EntitiesController < ApplicationController
     redirect_to groups_url
   end
 
+  def show
+    @group = Group.find(params[:group_id]) # Buscar el grupo por el id
+    @entity = Entity.find(params[:id])
+  end
   # GET /entities/new
   def new
     @entity = Entity.new
+    @group = Group.find(params[:group_id])
   end
 
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
     @entity.author = current_user
+    @group = Group.find(params[:group_id]) # find the group by the id
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully created.' }
+        @entity.group_ids = [@group.id] # Asigne group id to the entity
+        format.html { redirect_to group_entity_url(@group, @entity), notice: 'Entity was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -28,6 +35,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity, {}).permit(:name, :amount, group_ids: [])
+    params.require(:entity).permit(:name, :amount, group_ids: [])
   end
 end

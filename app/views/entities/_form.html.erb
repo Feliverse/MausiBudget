@@ -1,4 +1,4 @@
-<%= form_with(model: entity) do |form| %>
+<%= form_with(model: [@group, entity]) do |form| %>
   <% if entity.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
@@ -20,7 +20,7 @@
     <%= form.label :amount, style: "display: block" %>
     <%= form.text_field :amount %>
   </div>
-
+<%= form.hidden_field :group_id, value: @group.id %>
   <div>
     <%= form.submit %>
   </div>

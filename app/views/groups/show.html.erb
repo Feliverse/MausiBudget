@@ -3,8 +3,20 @@
 <%= render @group %>
 
 <div>
+ <h2>Entities</h2>
+<ul>
+  <% @group.entities.each do |entity| %>
+    <li><%= entity.name %> - <%= entity.amount %></li>
+  <% end %>
+</ul> 
+  
   <%= link_to "Edit this group", edit_group_path(@group) %> |
   <%= link_to "Back to groups", groups_path %>
 
+
   <%= button_to "Destroy this group", @group, method: :delete %>
 </div>
+
+<footer class="p-4 is-secondary">
+  <%= link_to 'Add a new transaction', new_group_entity_path(@group), class: "button is-outlined" %>
+</footer>
