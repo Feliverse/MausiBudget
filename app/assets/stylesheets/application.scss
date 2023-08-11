@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'Proxima-Nova-Bold';
-  src: font-url('Proxima-Nova-Bold.ttf') format('truetype');
+  src: url('../fonts/Proxima-Nova-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Proxima-Nova-Light';
-  src: font-url('Proxima-Nova-Light.ttf') format('truetype');
+  src: url('../fonts/Proxima-Nova-Light.ttf') format('truetype');
 }
 
 body {
