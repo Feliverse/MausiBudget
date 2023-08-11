@@ -6,6 +6,7 @@
     "stylelint-scss": "^3.21.0"
   },
   "dependencies": {
-    "csstree-validator": "^3.0.0"
+    "csstree-validator": "^3.0.0",
+    "esbuild": "^0.19.1"
   }
 }
