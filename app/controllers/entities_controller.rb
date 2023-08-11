@@ -9,6 +9,7 @@ class EntitiesController < ApplicationController
     @group = Group.find(params[:group_id]) # Buscar el grupo por el id
     @entity = Entity.find(params[:id])
   end
+
   # GET /entities/new
   def new
     @entity = Entity.new
@@ -24,7 +25,7 @@ class EntitiesController < ApplicationController
     respond_to do |format|
       if @entity.save
         @entity.group_ids = [@group.id] # Asigne group id to the entity
-        format.html { redirect_to group_entity_url(@group, @entity), notice: 'Entity was successfully created.' }
+        format.html { redirect_to group_url(@group), notice: 'Transaction was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
