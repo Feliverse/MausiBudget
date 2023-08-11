@@ -1,27 +1,22 @@
-<%= form_with(model: entity) do |form| %>
-  <% if entity.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+<%= bootstrap_form_with(model: [@group, entity]) do |form| %>
+  
+<header class="d-flex justify-content-between align-items-center">
+    <h2 class="p-2" onclick="history.back()"> ⬱ </h2>
+    <h5 class="p-2">NEW TRANSACTION</h5>
+    <small class="actions p-2">
+      <%= form.submit "Next", class: "btn btn-primary" %>
+    </small>
+  </header>
 
-      <ul>
-        <% entity.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<div class='col-11 col-sm-8 col-md-10 mx-auto pt-5' >
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, label_as_placeholder: true, class: 'py-3' %>
   </div>
 
   <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, label_as_placeholder: true, class: 'py-3' %>
   </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+<%= form.hidden_field :group_id, value: @group.id %>
+  
+</div>
 <% end %>

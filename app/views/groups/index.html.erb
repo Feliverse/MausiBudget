@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Groups</h1>
-
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
-  <% end %>
+<div>
+  <header class="d-flex justify-content-between align-items-center p-2">
+    <%= link_to root_path, class: 'button has-text-white' do %>
+      <h2 class="material-icons-outlined">⬱</h2>
+    <% end %>
+ 
+    <div class="">
+      <h4 class="title p-2">CATEGORIES</h4>
+    </div>
+    <%= button_to destroy_user_session_url, method: :delete, class: 'btn btn-primary p-2"' do %>
+      <span >Logout</span>
+    <% end %>
+  </header>
+  
+  <%= render @groups %>
 </div>
-
-<%= link_to "New group", new_group_path %>
+<footer class="fixed-bottom bg-success p-3">
+  <%= link_to 'Add a new category', new_group_path, class: "container btn btn-success rounded-0 btn-outline-light p-3" %>
+</footer>

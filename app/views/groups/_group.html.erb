@@ -1,12 +1,13 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
+<%= link_to group_url(group) do %>
+<div class="d-flex mx-2 mt-1 p-2 img-thumbnail">
+	<%= avatar(group.icon) %>
+	<div class="d-flex flex-grow-1 pl-2 justify-content-between">
+		<div class="mx-3">
+			<p class="fw-regular d-flex flex-grow-1 decor-none"><%= group.name %></p>
+			<small><%= group.created_at.strftime("%d %b %Y") %></small>
+		</div>
+		<small class="fw-bold">$<%= group.total_amount %></small>
+	</div>
 </div>
+<% end %>
+
