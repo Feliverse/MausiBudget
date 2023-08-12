@@ -1,36 +1,12 @@
-<a name="readme-top"></a>
-
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
 
- <br/>
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-  <h3><b> MausiBudget </b></h3>
+  <h3><b>MONEY MOVES</b></h3>
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -46,7 +22,7 @@ After you're finished please remove all the comments and instructions!
   - [Usage](#usage)
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Author](#author)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -54,31 +30,25 @@ After you're finished please remove all the comments and instructions!
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 Money moves <a name="about-project"></a>
 
-# 📖 [Mausi Budget] <a name="about-project"></a>
-
-> This is a Ruby on Rails app that allows user to create, and list payements grouped by related categories that spent on.
-
-**[Mausi Budget]** is a tracking your spending is often the first step in getting your finances in order. By understanding what you spend money on and how much you spend, you can see exactly where your cash is going and areas where you can cut back.
+This is a mobile web application, which allows users to control their budgets. The user can divide the budget into different categories and insert the expenses that have been made in the categories. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">Ruby On Rails</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://render.com/">Render</a></li>
   </ul>
 </details>
 
@@ -89,23 +59,20 @@ After you're finished please remove all the comments and instructions!
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-> what you spend money on and how much you spend, you can see exactly where your cash is going and areas where you can cut back.
-
-- **[Track your expenses]**
+- List all budget's categories.
+- List all transactions that belongs to one category.
+- Add a new category.
+- Add a new transaction.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+- [Video Documentation](https://youtu.be/6C62rAlq0Ow)
 
-- [Live Demo Link](https://Mausi Budget-a3.onrender.com)
+- [Live Demo Link](https://money-moves.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,108 +80,64 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to work on this project, you need to have the following dependencies installed:
+In order to run this project you need:
 
-<ul>
-  <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
-  <li><a href="https://www.postgresql.org/">Postgresql</a></li>
-  <li><a href="https://nodejs.org/en/">Node.js</a></li>
-  <li><a href="https://yarnpkg.com/">yarn</a></li>
-  <li><a href="https://rubyonrails.org/">Rails</a></li>
-</ul>
-
-<!--
-Example command:
 
 ```sh
  gem install rails
 ```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
+```sh
+  cd my-folder
+  git clone https://github.com/VaneCode/money_moves.git
+```
+
+### Install
+
+Install this project with:
 
 ```sh
-  git clone git@github.com:Feliverse/MausiBudget.git
-  cd MausiBudget
-```
-
-
-### Commands to run
-
-To get all the gems required for the project:
-
-
-```
-  bundle install
-```
-
-To install packages such as style linters:
-
-
-```
-  npm install
-```
-
-To check linters locally, use:
-
-```
-rubocop
-
-npx stylelint "**/*.{css,scss}"
-
-```
-
-Once you have the project correctly set up, run:
-
-To run all migrations, create the database for testing and for development, and insert some data into the database for you to visualize the changes:
-```
-bin/rails db:setup
-```
-
-Finally, each time you make changes to the project, run
-
-In the root folder to check the consistency of the app. Please don't make changes to the tests unless completely necessary, and mention it in your PR description:
-
-```
-bundle exec rspec /spec
+  cd my-project
+  gem install
 ```
 
 ### Usage
 
-To run the project, execute the following command:
+This project use Tailwind, so to run the project, execute the following command:
 
 
+```sh
+  bin/dev
 ```
-  rails server
-```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  bin/rails spec
 ```
 
+### Deployment
+
+You can deploy this project using:
+
+
+```sh
+ bin/dev
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
-## 👥 Author <a name="Aron Abraham"></a>
-
-> Mention all of the collaborators of this project.
+## 👥 Author <a name="authors"></a>
 
 👤 **Felipe Haybar**
 
@@ -222,23 +145,15 @@ To run tests, run the following command:
 - Twitter: [@FelipeHaybar](https://twitter.com/FelipeHaybar)
 - LinkedIn: [FelipeHaybar](https://linkedin.com/in/FelipeHaybar)
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **Images to choise by default**
 - [ ] **Navigator with find option**
 - [ ] **Calculator page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -248,44 +163,34 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project bring me some stars
+Give a star if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank:
-
-- Original Design by: [Gregoire Vella](https://www.behance.net/gregoirevella)
-
-- Microverse
-
-- LazyCoders
-
-- Coding Partners
+- This project's styles are based on the [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=&&&) by [Gregoire Vella](http://linkedin.com/company/minimalapps).
+- Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
+## ❓ FAQ <a name="faq"></a>
+
+- Why bin/dev instead of rails server?
+
+  - The commend bin/dev not only start your server, it also builts your Tailwind CSS classes to give the styles.
+
+- What is current_user?
+
+  - This is a built-in method of Devise which help to get the user who is currently loged in the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
