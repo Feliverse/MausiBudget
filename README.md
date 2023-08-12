@@ -97,7 +97,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/VaneCode/money_moves.git
+  git clone https://github.com/Feliverse/MausiBudget.git
 ```
 
 ### Install
@@ -106,7 +106,7 @@ Install this project with:
 
 ```sh
   cd my-project
-  gem install
+  bundle install
 ```
 
 ### Usage
@@ -123,7 +123,7 @@ This project use Tailwind, so to run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  bin/rails spec
+  rails spec
 ```
 
 ### Deployment
@@ -132,7 +132,7 @@ You can deploy this project using:
 
 
 ```sh
- bin/dev
+  rails server
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
