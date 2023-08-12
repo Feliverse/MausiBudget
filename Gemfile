@@ -75,7 +75,7 @@ end
 
 # Use devise to autenrticate users
 gem 'cancancan'
-gem 'devise'
+gem 'devise', '~> 4.2'
 gem 'rubocop'
 
 # use bootstrap to style the app
