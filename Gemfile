@@ -53,6 +53,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   # Use rspec for testing
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
