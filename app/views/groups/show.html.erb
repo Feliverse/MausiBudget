@@ -4,7 +4,7 @@
     <% end %>
  
     <div class="">
-      <h4 class="title p-2 ">TRANSACTIONS</h4>
+      <h5 class="title p-2 ">TRANSACTIONS</h5>
     </div>
     <%= button_to destroy_user_session_url, method: :delete, class: 'btn btn-primary p-2"' do %>
       <span >Logout</span>
@@ -16,7 +16,7 @@
 <div>
   <P class='text-center '>DETAILS<P>
 <ul class="img-thumbnail ">
-  <% @group.entities.each do |entity| %>
+  <% @group.entities.order(created_at: :desc).each do |entity| %>
     <li class="d-flex justify-content-between px-4">
       <p><%= entity.name %> </p>
       <small class="fw-bold"><%= entity.amount %></small>

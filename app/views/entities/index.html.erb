@@ -3,7 +3,7 @@
 <h1>Entities</h1>
 
 <div id="entities">
-  <% @entities.each do |entity| %>
+  <% @entities.order(created_at: :asc).each do |entity| %>
     <%= render entity %>
     <p>
       <%= link_to "Show this entity", entity %>

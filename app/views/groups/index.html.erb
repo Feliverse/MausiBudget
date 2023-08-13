@@ -12,7 +12,10 @@
     <% end %>
   </header>
   
-  <%= render @groups %>
+<% @groups.order(created_at: :desc).each do |group| %>  
+  <%= render group %>
+<% end %>
+
 </div>
 <footer class="fixed-bottom bg-success p-3">
   <%= link_to 'Add a new category', new_group_path, class: "container btn btn-success rounded-0 btn-outline-light p-3" %>
