@@ -1,10 +1,10 @@
 <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <header class="d-flex justify-content-between align-items-center">
-    <h2 class="p-2" onclick="history.back()"> ⬱ </h2>
-    <h2 class="p-2">REGISTER</h2>
-    <div class="actions p-2">
+    <h4 class="p-2" onclick="history.back()"> ⬱ </h4>
+    <h4 class="p-2">LOGIN</h4>
+    <small class="actions p-2">
       <%= f.submit "Next", class: "btn btn-primary" %>
-    </div>
+    </small>
   </header>
   <div class='col-11 col-sm-8 col-md-10 mx-auto pt-5' >
     <%= render "devise/shared/error_messages", resource: resource %>
