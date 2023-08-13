@@ -1,0 +1,10 @@
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 90vh;">
+  <%= image_tag "mausi.png", class: "img-fluid rounded-circle col-6" %>
+</div>
+
+<footer class="fixed-bottom bg-light p-1">
+  <div class="container text-center d-flex flex-column">
+    <%= link_to "LOG IN", new_user_session_path, class: 'btn btn-lg btn-primary rounded-0' %>
+    <%= link_to "SIGN UP", new_user_registration_path, class: 'btn btn-lg btn-light mr-3 rounded-0 mb-2' %>
+  </div>
+</footer>
